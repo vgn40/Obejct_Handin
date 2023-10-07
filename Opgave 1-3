@@ -1,0 +1,100 @@
+/*
+
+1 - What to wear
+
+ */
+
+
+function jacketMaster(temp) {
+if (temp < 0){
+    return "You should wear a jacket"}
+else if (temp > 0){
+    return"you should put on shorts"
+}
+else if (temp % 0 !== 0){
+    return "please enter a number"
+}
+}
+
+console.log(jacketMaster(3))
+/*
+
+Dice opgave
+
+ */
+
+function jacketMaster(temp) {
+if (temp < 0){
+    return "You should wear a jacket"}
+else if (temp > 0){
+    return"you should put on shorts"
+}
+else if (temp % 0 !== 0){
+    return "please enter a number"
+}
+}
+
+console.log(jacketMaster(3))
+/*
+
+2 - Dice game 🎲
+
+ */
+
+    function diceRoll() {
+        const savedRolls = [];
+
+        for (let i = 0; i < 2; i++) {
+            let roll = Math.floor(Math.random() * 6) + 1;
+            savedRolls.push(roll);
+            if (savedRolls[0] === 6 && savedRolls[1] === 6) {
+                console.log("Jackpot!");
+            }
+            else if (savedRolls[0] === 6 || savedRolls[1] === 6) {
+                console.log("You just rolled a 6!");
+            }
+            else if (savedRolls[0] !== 6 && savedRolls[1] !== 6) {
+                console.log("Try again");
+            }
+
+        }
+
+        return savedRolls;
+    }
+
+    const result = diceRoll();
+    console.log(result);
+
+
+/*
+
+3 - Build a sentiment analyzer
+
+ */
+
+
+let score = 0;
+positiveWords = [];
+negativeWords = [];
+
+const getSentimentScore = (string) => {
+   const words = string.split(" ");
+    words.forEach((word, index) => {
+        if (word === "super" || word === "awesome" || word === "happy"){
+            score += 1;
+            positiveWords.push(word)
+        }
+        else if (word === "sad" || word === "depressed" || word === "ugly"){
+            score -= 1;
+            negativeWords.push(word)
+        }
+        return {score, positiveWords, negativeWords}
+    }
+)};
+
+getSentimentScore('I am sad depressed mega super awesome happy') ;
+
+
+console.log("Score: ", score);
+console.log("Positive words: ", positiveWords)
+console.log("Negative words", negativeWords)
